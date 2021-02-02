@@ -1,0 +1,82 @@
+// // An approximation of the TaskPaper 2 Helvetidark theme for TaskPaper 3
+// also heavily modded w HelveticaColorLightSize - updated for TP3
+
+@text-color: rgb(34, 34, 34);
+@background-color: rgb(219, 233, 244);
+@font-family-header: Tahoma, Verdana, Segoe, sans-serif;
+@font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@user-font-size: 13;
+@line-height-multiple: 1.33;
+
+@selection-color: rgb(179, 213, 255);
+@invisibles-color: mix(@tint-color, @background-color, 70%);
+@cursor-color: rgb(38, 50, 56);
+@done-color: rgb(53, 99, 149);
+@tag-color: rgb(127, 0, 128);
+@tint-color: rgb(203, 74, 210);
+editor {
+    caret-color: @cursor-color;
+}
+
+item {
+    line-height-multiple: 1.2;
+    // handle-color: rgb(34, 34, 34);
+    // handle-border-color: none;
+    > run[link] {
+        color: @tint-color;
+    }
+    > run[tag] {
+        color: @tag-color;
+    }
+}
+
+item[data-type="project"] {
+  font-family: @font-family-header;
+  font-size: @user-font-size;
+  font-weight: normal;
+  color: @tint-color;
+}
+
+item[depth=1][data-type=project] {
+    font-family: @font-family-header;
+    font-size: @user-font-size + 5;
+}
+
+item[data-type="note"] {
+  // font-style: normal;
+  color: rgb(117, 76, 255);
+}
+
+item[data-done] {
+  > run[content] {
+      color: @done-color;
+      // text-strikethrough: none;
+      text-strikethrough-color: @done-color;
+  }
+  > run[tag] {
+        color: @done-color;
+  }
+}
+
+item[data-priority] {
+  color: rgb(209, 28, 36);
+  > run {
+    color: rgb(209, 28, 36);
+  }
+}
+
+item[data-done] {
+  color: @text-color;
+  > run {
+    color: @text-color;
+  }
+  > run[link] {
+    color: @tint-color;
+  }
+  > run[link^="button"] {
+    color: @text-color;
+  }
+  > run[tag] {
+    color: mix(@text-color, @background-color, 35%);
+  }
+}
