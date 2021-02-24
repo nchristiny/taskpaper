@@ -1,19 +1,19 @@
 // // An approximation of the TaskPaper 2 Helvetidark theme for TaskPaper 3
 // also heavily modded w HelveticaColorLightSize - updated for TP3
 
-@text-color: rgb(34, 34, 34);
-@background-color: rgb(219, 233, 244);
+@text-color: rgb(42, 255, 223);
+@background-color: rgb(25, 53, 73);
 @font-family-header: Tahoma, Verdana, Segoe, sans-serif;
 @font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 @user-font-size: 13;
 @line-height-multiple: 1.33;
 
-@selection-color: rgb(179, 213, 255);
+@selection-color: rgb(53, 67, 77);
 @invisibles-color: mix(@tint-color, @background-color, 70%);
-@cursor-color: rgb(38, 50, 56);
-@done-color: rgb(53, 99, 149);
-@tag-color: rgb(127, 0, 128);
-@tint-color: rgb(203, 74, 210);
+@cursor-color: rgb(251, 148, 255);
+@done-color: rgb(255, 198, 0);
+@tag-color: rgb(203, 74, 210);
+@tint-color: rgb(255, 157, 0);
 editor {
     caret-color: @cursor-color;
 }
@@ -44,7 +44,8 @@ item[depth=1][data-type=project] {
 
 item[data-type="note"] {
   // font-style: normal;
-  color: rgb(117, 76, 255);
+  // color: rgb(42, 255, 223);
+  color: rgb(158, 255, 255);
 }
 
 item[data-done] {
@@ -59,16 +60,16 @@ item[data-done] {
 }
 
 item[data-today] {
-  color: rgb(209, 28, 36);
+  color: rgb(251, 148, 255);
   > run {
-    color: rgb(209, 28, 36);
+    color: rgb(251, 148, 255);
   }
 }
 
 item[data-todo] {
-  color: rgb(0, 128, 0);
+  color: rgb(66, 200, 0);
   > run {
-    color: rgb(0, 128, 0);
+    color: rgb(66, 200, 0);
   }
 }
 
